@@ -59,15 +59,29 @@ header {
         
     }
 }
-.container-logo:hover, .item:hover{
+.menu-button:hover, .container-logo:hover, .item:hover{
     cursor: pointer;
 }
 @media (max-width: 600px)  {
     header {
-        height: 50px;
+        height: 59px;
     }
     .list-menu {
         display: none;
+        position: absolute;
+        flex-direction: column;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        li{
+            padding: 15px 0 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
     }
     .menu-button {
         display: flex;
