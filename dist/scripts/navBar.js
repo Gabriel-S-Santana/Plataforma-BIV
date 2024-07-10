@@ -14,3 +14,13 @@ btnMenu.addEventListener('click', () => {
         }, 80); // Tempo da animação
     }
 });
+
+document.getElementById('navigate-acoes').addEventListener('click', ()=>{
+    window.location.href = '/dist/pages/acoes.html'
+})
+
+document.querySelectorAll('.navigate-home').forEach(element =>{
+    element.addEventListener('click', ()=>{
+        window.location.href = '/index.html'
+    })
+})
