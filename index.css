@@ -1,60 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 *,
 body,
 html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
 }
 
 h1,
 h2,
 p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  width: 100vw;
-  height: auto;
+    width: 100vw;
+    height: auto;
 }
 
 .home-section {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  gap: 100px;
-  padding: 0 112px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 8% 0 8%;
+}
+
+.hero-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero-title {
-  color: #000;
-  font-family: Roboto;
-  font-size: 44px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+    color: #000;
+    font-family: Roboto;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .hero-title-secondary {
-  color: #000;
-  font-family: Roboto;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .hero-text-container {
-  display: flex;
-  width: 703px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 35px;
-  flex-shrink: 0;
-  align-self: stretch;
+    display: flex;
+    width: 703px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.container-buttons {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.button-primary {
+    display: flex;
+    padding: 12px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #f8b739;
+    text-decoration: none;
+    color: black;
+}
+
+.button-secondary {
+    display: flex;
+    padding: 12px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: black;
+    background: #d9d9d9;
+    text-decoration: none;
 }

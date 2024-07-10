@@ -41,6 +41,13 @@ header {
     align-items: center;
     justify-content: space-between;
     user-select: none;
+
+    li {
+        transition: color 0.3s ease;
+    }
+    li:hover {
+        color: yellow;
+    }
 }
 .container-logo {
     height: 100%;
@@ -69,10 +76,12 @@ header {
     .list-menu {
         display: none;
         position: absolute;
+        top: -100%;
         flex-direction: column;
         left: 0;
-        top: 50px;
+        /* top: 50px; */
         width: 100%;
+        transition: top 0.5s ease;
         li{
             padding: 15px 0 15px 0;
             display: flex;
@@ -93,5 +102,19 @@ header {
         img {
             width: 80%;
         }
+    }
+    .list-menu.active {
+        display: flex;
+        top: 58px;
+        animation: slide-in 0.5s forwards;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%); /* Começa acima da tela */
+    }
+    100% {
+        transform: translateY(0); /* Desliza para baixo */
     }
 }
