@@ -7,7 +7,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: black;
-
+    z-index: 4;
     color: white;
     font-family: Roboto;
 }
