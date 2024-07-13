@@ -21,7 +21,7 @@ document.querySelectorAll('.navigate-home').forEach(element =>{
         window.location.href = '../../index.html'
     })
 })
-document.querySelectorAll('.navigate-acoes').forEach(element =>{
+document.querySelectorAll('#navigate-acoes').forEach(element =>{
     element.addEventListener('click', ()=>{
         window.location.href = './dist/pages/acoes.html'
     })
