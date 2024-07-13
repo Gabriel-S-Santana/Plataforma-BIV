@@ -17,48 +17,15 @@ p {
 }
 
 body {
-    width: 100vw;
     height: auto;
 }
 
+/* Variáveis */
 
-.card {
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 56px;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    border: 0.5px solid #E3000B;
-    box-shadow: -2px 5px 10.7px 0px rgba(0, 0, 0, 0.25);
-}
-
-.card::before {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #FFF 0.05%, #E3000B 125.94%);
-    transition: transform 0.5s ease;
-    transform: translateY(100%);
-}
-
-.card:hover::before {
-    transform: translateY(0);
-}
-
-.card-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+:root {
+    --title-h1: 44px;
+    --title-h2: 36px;
+    --title-secondary: 24px;
 }
 
 /* REUTILIZÁVEIS */
@@ -66,7 +33,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
 }
 
 .wrapper {
@@ -99,10 +66,63 @@ main {
     text-decoration: none;
 }
 
+.card {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    border: 0.5px solid #e3000b;
+    box-shadow: -2px 5px 10.7px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #fff 0.05%, #e3000b 125.94%);
+    transition: transform 0.5s ease;
+    transform: translateY(100%);
+}
+
+.card:hover::before {
+    transform: translateY(0);
+}
+
+.card-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+footer {
+    display: flex;
+    margin-top: 20px;
+    padding: 15px 0px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    background-color: #000;
+}
+
+footer p {
+    font-size: 16px;
+    color: #fff;
+}
+
 /* HOME */
 
 .home-section {
-    padding: 60px 8% 0 8%;
+    padding: 120px 8% 0 8%;
 }
 
 .hero-container {
@@ -112,10 +132,18 @@ main {
     align-items: center;
 }
 
+.hero-img-container {
+    width: 40%;
+    height: 100%;
+    background: url("dist/assets/coin-trab.png") center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .hero-title {
     color: #000;
     font-family: Roboto;
-    font-size: 44px;
+    font-size: var(--title-h1);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -124,7 +152,7 @@ main {
 .hero-title-secondary {
     color: #000;
     font-family: Roboto;
-    font-size: 24px;
+    font-size: var(--title-secondary);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -132,7 +160,7 @@ main {
 
 .hero-text-container {
     display: flex;
-    width: 703px;
+    width: 60%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -164,7 +192,7 @@ main {
     h2 {
         color: #000;
         font-family: Roboto;
-        font-size: 36px;
+        font-size: var(--title-h2);
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -174,10 +202,134 @@ main {
 .highlight-cards-container {
     display: flex;
     width: 70%;
-    justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
-    row-gap: 32px;
+    gap: 20px;
     flex-shrink: 0;
     flex-wrap: wrap;
+}
+
+.highlight-cards-container-responsive {
+    display: none;
+}
+
+@media (max-width: 890px) {
+    main {
+        gap: 30px;
+    }
+
+    .home-section {
+        padding-top: 100px;
+    }
+
+    .hero-text-container {
+        width: 60%;
+    }
+
+    :root {
+        --title-h1: 34px;
+        --title-h2: 26px;
+        --title-secondary: 18px;
+    }
+
+    .highlight-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .highlight-text {
+        width: 100%;
+    }
+
+    .highlight-cards-container {
+        width: 100%;
+    }
+    .remove-responsive {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .hero-img-container {
+        background-image: url("dist/assets/responsive-coin.png");
+        background-position: center;
+        width: 100%;
+        height: 300px;
+    }
+
+    .hero-text-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-title-secondary {
+        display: none;
+    }
+
+    .container-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .button-primary,
+    .button-secondary {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+
+    .highlight-cards-container {
+        display: none;
+    }
+
+    .highlight-cards-container-responsive {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 28px;
+        align-items: flex-start;
+        align-content: flex-start;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+
+    .card-responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 22px;
+        padding: 16px 11px;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: -1px 1px 10.7px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-upper-section {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-upper-section p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .card-upper-section img {
+        width: 56px;
+    }
+
+    .card-down-section h6 {
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .card-down-section p {
+        font-weight: 500;
+        font-size: 14px;
+    }
 }

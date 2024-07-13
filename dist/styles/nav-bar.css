@@ -33,7 +33,7 @@ header {
     }
 }
 .list-menu {
-    font-size: 14px;
+    font-size: 16px;
     list-style-type: none;
     height: 100%;
     width: 40%;
@@ -76,6 +76,7 @@ header {
     .list-menu {
         display: none;
         position: absolute;
+        visibility: hidden;
         top: -100%;
         flex-direction: column;
         left: 0;
@@ -105,6 +106,7 @@ header {
     }
     .list-menu.active {
         display: flex;
+        visibility: visible;
         top: 58px;
         animation: slide-in 0.5s forwards;
     }

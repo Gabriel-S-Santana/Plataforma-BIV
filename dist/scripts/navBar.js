@@ -15,12 +15,14 @@ btnMenu.addEventListener('click', () => {
     }
 });
 
-document.getElementById('navigate-acoes').addEventListener('click', ()=>{
-    window.location.href = '/dist/pages/acoes.html'
-})
 
 document.querySelectorAll('.navigate-home').forEach(element =>{
     element.addEventListener('click', ()=>{
-        window.location.href = '/index.html'
+        window.location.href = '../../index.html'
+    })
+})
+document.querySelectorAll('.navigate-acoes').forEach(element =>{
+    element.addEventListener('click', ()=>{
+        window.location.href = './dist/pages/acoes.html'
     })
 })
