@@ -69,6 +69,10 @@ header {
 .menu-button:hover, .container-logo:hover, .item:hover{
     cursor: pointer;
 }
+
+#nav-active {
+    color: yellow;
+}
 @media (max-width: 600px)  {
     header {
         height: 59px;

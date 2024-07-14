@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+:root {
+    --title-h1: 44px;
+    --title-h2: 36px;
+    --title-secondary: 24px;
+}
 * {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    ;
 }
 body {
     height: 100vh;
@@ -15,7 +19,9 @@ body {
     margin-top: 60px;
     height: 15%;
     width: 100%;
-    padding: 0 2% 0 10%;
+    background-color: white;
+    padding: 0 8% 0 8%;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,7 +43,6 @@ body {
     .sub-title {
         font-size: 20px;
     }
-
 }
 .card-container {
     display: flex;
@@ -68,7 +73,7 @@ body {
     }
 }
 #disponivel {
-    background-color: orange    ;
+    background-color: orange;
     color: black;
 }
 #investido {
@@ -80,7 +85,150 @@ body {
     height: 5000px;
 }
 
-@media (orientation: portrait){
+/* COMPRAR AÇÕES */
+
+.section-organizer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 53px;
+}
+
+.section-comprar {
+    padding-top: 200px;
+}
+
+.warn {
+    display: flex;
+    width: 80%;
+    height: auto;
+    padding: 18px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.warn p {
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.warn-green {
+    background: #e2fbdd;
+    color: #198e05;
+}
+.warn-blue {
+    background: #cce5ff;
+    color: #3b65b5;
+}
+
+.container-acoes {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-acoes h1 {
+    font-size: var(--title-h1);
+    font-weight: 700;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+/* ALTERAÇÕES NOS CARDS */
+
+.card-responsive {
+    align-items: center;
+    width: 250px;
+    padding: 20px;
+    transition: 0.5s ease;
+}
+
+.card-responsive:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container-1 {
+    background-image: url("../assets/coca-cola-seeklogo.svg");
+}
+
+.container-2 {
+    background-image: url("../assets/apple-seeklogo.svg");
+}
+
+.container-3 {
+    background-image: url("../assets/sony-seeklogo.svg");
+}
+
+.container-4 {
+    background-image: url("../assets/lego-super-mario-seeklogo.svg");
+}
+
+.card-upper-section p {
+    font-size: 18px;
+}
+
+.card-upper-section button {
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.card-upper-section button:hover {
+    transform: translateY(-2px);
+}
+
+.card-down-section {
+    width: 100%;
+}
+
+.card-down-section h6 {
+    font-size: 22px;
+}
+.card-down-section p {
+    font-size: 20px;
+}
+
+.card-responsive .button-primary {
+    width: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: #05ec00;
+    color: white;
+}
+.card-responsive .button-secondary {
+    width: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: #e20000;
+    color: white;
+}
+
+@media (max-width: 890px) {
     .text-container {
         display: none;
     }
@@ -96,10 +244,72 @@ body {
         max-width: 150px;
         width: 40px;
         .text {
-            font-size: 12px;
+            font-size: 26px;
+        }
+        .valor {
+            font-size: 30px;
+        }
+    }
+
+    .warn {
+        width: 100%;
+    }
+
+    .section-comprar {
+        padding-top: 250px;
+    }
+
+    .card-responsive {
+        width: 200px;
+    }
+
+    .card-down-section p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 430px) {
+    .card-valor {
+        .text {
+            font-size: 16px;
         }
         .valor {
             font-size: 20px;
         }
+    }
+
+    .section-comprar {
+        padding-top: 180px;
+    }
+
+    .cards-container {
+        gap: 20px;
+    }
+
+    .card-responsive {
+        display: flex;
+        width: 140px;
+
+        justify-content: center;
+        align-items: center;
+        gap: 26px;
+        padding: 10px;
+    }
+
+    .card-img-container {
+        height: 50px;
+    }
+
+    .card-upper-section p, .card-down-section p {
+        font-size: 12px;
+    }
+
+    .card-down-section h6 {
+        font-size: 16px;
+    }
+
+    .card-responsive .button-primary,.card-responsive .button-secondary {
+        font-size: 10px;
+        padding: 8px 0;
     }
 }
