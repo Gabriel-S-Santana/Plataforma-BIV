@@ -34,7 +34,7 @@ body {
 .image-content {
     height: 70px;
     width: 70px;
-    background-image: url('/dist/assets/trofeu.png');
+    background-image: url('../assets/trofeu.png');
     background-size: 100%;
 }
 .date {
