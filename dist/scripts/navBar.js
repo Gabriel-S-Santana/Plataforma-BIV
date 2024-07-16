@@ -14,19 +14,3 @@ btnMenu.addEventListener('click', () => {
         }, 80); // Tempo da animação
     }
 });
-
-
-document.querySelectorAll('.navigate-home').forEach(element =>{
-    element.addEventListener('click', ()=>{
-        console.log(window.location.href)
-        window.location.href = './../../index.html'
-    })
-})
-document.querySelectorAll('#navigate-acoes').forEach(element =>{
-    element.addEventListener('click', ()=>{
-        window.location.href = './dist/pages/acoes.html'
-    })
-})
-document.getElementById('navigate-historico').addEventListener('click', ()=>{
-    window.location.href = './dist/pages/historico.html'
-})
