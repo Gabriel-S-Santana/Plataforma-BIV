@@ -54,8 +54,7 @@
                         tornando o mercado financeiro acessível a todos os perfis de investidores!
                     </h3>
                     <div class="container-buttons">
-                        <a href="dist/pages/acoes.html" class="button-primary">Investir</a>
-                        <a href="#" class="button-secondary">Saiba mais</a>
+                        <a id="navigate-acoes" class="button-primary">Investir</a>
                     </div>
                 </div>
                 <div class="hero-img-container">
@@ -67,7 +66,7 @@
         <section class="highlight-section wrapper">
             <div class="highlight-text">
                 <h2>Confira as ações em destaque no mercado hoje!</h2>
-                <a href="dist/pages/acoes.html" class="button-primary remove-responsive">Investir</a>
+                <a id="navigate-acoes" class="button-primary remove-responsive">Investir</a>
             </div>
             <div class="highlight-cards-container">
                 <div class="card">

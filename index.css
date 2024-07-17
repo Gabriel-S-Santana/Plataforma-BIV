@@ -54,6 +54,8 @@ main {
 .button-primary {
     display: flex;
     padding: 12px 30px;
+    border: none;
+    outline: none;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -64,6 +66,8 @@ main {
 }
 
 .button-secondary {
+    border: none;
+    outline: none;
     display: flex;
     padding: 12px 30px;
     justify-content: center;

@@ -32,10 +32,10 @@
             <img src="../assets/divisa-esquerda.png">
         </div>
         <ul class="list-menu">
-            <li class="item"><a href="../../index.html">Início</a></li>
-            <li class="item" > <a href="acoes.html">Ações</a></li>
-            <li class="item" > <a href="#">Histórico</a></li>
-            <li class="item" > <a href="#">Créditos</a></li>
+        <li class="item navigate-home">Início</li>
+            <li class="item" id="navigate-acoes">Ações</li>
+            <li class="item" id="navigate-historico">Histórico</li>
+            <li class="item" >Créditos</li>
         </ul>
         <div class="navigate-home container-logo">
             <h1>Via de Acesso</h1>
