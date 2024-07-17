@@ -27,17 +27,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 });
 
-input.addEventListener('change', () => {
-  // Converter o valor do input para float
+input.addEventListener('keyup', () => {
   let valorInput = parseFloat(input.value);
-  // Converter o valor do localStorage para float
+
+  if (isNaN(valorInput)) {
+    total.innerHTML = ''; 
+    return;
+  }
+
   let valorAcao = parseFloat(localStorage.getItem('valor').replace(',', '.'));
+  let valorTotal = valorInput * valorAcao;
 
-  // Multiplicar os valores
-  valorTotal = valorInput * valorAcao;
-
-  // Atualizar o HTML com o valor total formatado com 2 casas decimais
-  total.innerHTML = `O valor total será: R$${valorTotal.toFixed(2)}`;
+  if (isNaN(valorTotal)) {
+    total.innerHTML = ''; 
+  } else {
+    total.innerHTML = `O valor total será: R$${valorTotal.toFixed(2)}`;
+  }
 });
 
 button.addEventListener('click', () => {

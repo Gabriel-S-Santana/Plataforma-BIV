@@ -1,6 +1,5 @@
 document.querySelectorAll('.navigate-home').forEach(element =>{
     element.addEventListener('click', ()=>{
-        console.log(window.location.href)
         window.location.href = '../../index.html'
     })
 })
