@@ -32,7 +32,7 @@
             <img src="../assets/divisa-esquerda.png">
         </div>
         <ul class="list-menu">
-        <li class="item navigate-home">Início</li>
+            <li class="item navigate-home">Início</li>
             <li class="item" id="navigate-acoes">Ações</li>
             <li class="item" id="navigate-historico">Histórico</li>
             <li class="item" >Créditos</li>
