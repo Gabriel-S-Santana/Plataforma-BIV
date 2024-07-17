@@ -140,7 +140,6 @@
             </li>
     </section>
     <script src="../scripts/navBar.js"></script>
-    <script src="../scripts/navBarPages.js"></script>
-    <script src="lisHistorico"></script>
+    <script src="../scripts/navbarPages.js"></script>
 </body>
 </html>

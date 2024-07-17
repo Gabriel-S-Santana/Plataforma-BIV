@@ -63,6 +63,6 @@
     </main>
     <script src="../scripts/navBar.js"></script>
     <script src="../scripts/load.js"></script>
-    <script src="../scripts/navBarPages.js"></script>
+    <script src="../scripts/navbarPages.js"></script>
 </body>
 </html>
