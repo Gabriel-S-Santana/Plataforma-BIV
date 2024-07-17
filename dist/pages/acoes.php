@@ -208,7 +208,7 @@
     </footer>
     
     <script src="../scripts/navBar.js"></script>
-    <script src="../scripts/navbarAcoes.js"></script>
+    <script src="../scripts/navbarPages.js"></script>
     <script src="../scripts/buy-sell.js"></script>
 </body>
 </html>

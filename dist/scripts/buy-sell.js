@@ -19,6 +19,6 @@ buttonArray.forEach((btn) => {
         localStorage.setItem('empresa', empresa)
         localStorage.setItem('compra', compra)
 
-        window.location.href = "../pages/confirm.html"
+        window.location.href = "../pages/confirm.php"
     })
 });

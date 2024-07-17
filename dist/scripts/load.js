@@ -36,7 +36,7 @@ input.addEventListener('keyup', () => {
   }
 
   let valorAcao = parseFloat(localStorage.getItem('valor').replace(',', '.'));
-  let valorTotal = valorInput * valorAcao;
+  valorTotal = valorInput * valorAcao;
 
   if (isNaN(valorTotal)) {
     total.innerHTML = ''; 
