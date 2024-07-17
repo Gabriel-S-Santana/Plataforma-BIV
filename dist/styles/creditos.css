@@ -1,4 +1,24 @@
 .modifier-credit {
     width: 100%;
     text-align: center;
+
+    h1 {
+        color: #fff;
+    }
+
+    h3 {
+        color: #fff;
+    }
+}
+
+.layout {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: url('../assets/background-mockup.png');
+    background-size: contain;
+    background-position: center;
 }
