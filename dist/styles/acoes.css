@@ -14,6 +14,12 @@ body {
     height: 100vh;
     width: 100%;
 }
+main {
+    align-items: center;
+    padding-top: 250px;
+    gap: 40px;
+}
+
 .valor-container {
     position: fixed;
     margin-top: 60px;
@@ -59,7 +65,6 @@ body {
     justify-content: center;
     padding: 10px;
     gap: 5px;
-    background-color: aqua;
     height: 70%;
     min-height: 80px;
     min-width: 50%;
@@ -73,8 +78,8 @@ body {
     }
 }
 #disponivel {
-    background-color: orange;
-    color: black;
+    background-color: #f8b739;
+    color: #000036;
 }
 #investido {
     background-color: black;
@@ -94,9 +99,70 @@ body {
     gap: 53px;
 }
 
-.section-comprar {
-    padding-top: 250px;
+.switch-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
+
+.switch-input {
+    display: none;
+}
+
+.switch-label {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background: #05ec00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    position: relative;
+}
+
+
+.switch-label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 44px;
+    height: 44px;
+    background: #e4e4e4;
+    border-radius:100%;
+    transition: 0.3s;
+}
+
+.switch-input:checked + .switch-label {
+    background: #e20000;
+}
+
+#switch-text {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.switch-input:checked + .switch-label:after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+}
+
+.section-organizer {
+    display: none;
+}
+
+.section-organizer.hidden {
+    display: none;
+}
+
+.section-organizer:not(.hidden) {
+    display: block;
+}
+
 
 .warn {
     display: flex;
@@ -229,6 +295,10 @@ body {
 }
 
 @media (max-width: 890px) {
+
+    main {
+        gap: 20px;
+    }
     .text-container {
         display: none;
     }
@@ -255,9 +325,6 @@ body {
         width: 100%;
     }
 
-    .section-comprar {
-        padding-top: 250px;
-    }
 
     .card-responsive {
         width: 200px;
@@ -269,6 +336,11 @@ body {
 }
 
 @media (max-width: 430px) {
+
+    main {
+        padding-top: 200px;
+    }
+
     .card-valor {
         .text {
             font-size: 16px;
@@ -278,8 +350,9 @@ body {
         }
     }
 
-    .section-comprar {
-        padding-top: 220px;
+    .container-acoes h1 {
+        text-align: center;
+        font-size: 36px;
     }
 
     .cards-container {

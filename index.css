@@ -62,7 +62,8 @@ main {
     border-radius: 4px;
     background: #f8b739;
     text-decoration: none;
-    color: black;
+    color: #000036;
+    cursor: pointer;
 }
 
 .button-secondary {
@@ -77,6 +78,7 @@ main {
     color: black;
     background: #d9d9d9;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .card {
